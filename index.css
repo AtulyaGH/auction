@@ -17,26 +17,72 @@ body::after {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
-
-#info {
+.updates{
     position: absolute;
-    right: 0px;
-    background-color: #a2d5f2;
+    right: 0px; 
+    top: 20%;
     padding: 10px;
     border-radius: 5px;
+    border-left: #007BFF 2px inset;
     transition: all 0.3s ease-in-out;
-    font-weight: bolder;
+    font-weight: bolder; 
 }
 
+#info {  
+    max-height: 600px;
+    overflow-x: auto;
+    display: flex;
+  flex-direction: column-reverse;
+  max-width: 350px;
+}
+#mainarea{
+    display: flex;
+    flex-direction: row;
+}
+.basic{
+    display: flex;
+    flex-direction: column;
+}
 .player, .type, .base, .bidding {
     font-size: 1.2em;
     margin-bottom: 10px;
     font-weight: bolder;
 }
-
-textarea , select{
-    width: 30%;
+.currentBid{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    border-right: solid 1px #0056b3;
+    border-left: solid 1px #0056b3;
+    margin-left: 27px;
+}
+.bidding{
+    width: 650px;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+#bidText{
+    width: auto;
+    height: 30px;
+    padding: 5px;
+}
+.playerInfo, .playerCategory{  
+    width: auto;
+    height: 30px;
+    padding: 5px; 
+    font-weight: bolder; 
+}
+.playerInfo{
+    font-size: 40px;
+}
+.playerCategory{
+    font-size: 25px;
+}
+textarea , select, .bidButton{
+    width: 100%;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ddd;
@@ -59,6 +105,7 @@ button {
     color: #fff;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    margin: 10px;
 }
 
 button:hover {
@@ -70,11 +117,9 @@ button:active {
 }
 
 .amt {
-    width: 100px;
+    width: auto;
     height: 20px;
-    background: #fff;
-    border: 1px solid #ddd;
-    padding: 10px;
+    padding: 10px 0;
     border-radius: 5px;
     margin-bottom: 10px;
     transition: all 0.3s ease-in-out;
@@ -85,22 +130,78 @@ button:active {
     width: 100%;
     font-size: 50px;
     font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
 }
 #team{
-    width: 100px;
+    width: auto;
     height: 30px;
-    padding: 10px;
+    padding: 5px;
 }
 #timer{
     width: 70px;
     height: 50px;
     background:#fff;
-    position: absolute;
-    top: 20%;
-    left: 45%;
     border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 30px;
+    font-size: 50px;
+    margin-bottom: 20px;
+    font-weight: bolder;
+}
+.budget{
+    display: flex; 
+    margin-top: 10px;  
+    border-top: #0056b3 solid 1px; 
+    margin-bottom: 10px;
+    max-width: 79.5%;
+    justify-content: center;
+    border-right: #0056b3 solid 1px;
+}
+.bgt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-bottom: #0056b3 solid 1px;
+    border-right: #0056b3 solid 1px;
+    font-size: 25px;
+}
+.teams{
+    margin-top: 10px;
+}
+/* Style the header */
+#budget1, #budget2, #budget3, #budget4 {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Style the team names */
+#budget1, #team1info, #team2info, #team3info{
+    color: #007BFF;
+}
+
+/* Style the budget numbers */
+#budget21, #budget31, #budget32, #budget33, #budget41, #budget42, #budget43 {
+    color: #28a745;
+    font-weight: bolder;
+}
+#team11,#team12,#team13{
+    color: #28a745;
+    font-weight: normal;
+}
+.teamInfo{
+    display: flex;
+    justify-content: center;
+    border-right: #0056b3 solid 1px;
+    font-weight: bolder;
+}
+.tmIn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:10px 30px ;
+    border-right: #0056b3 solid 1px;    
 }
