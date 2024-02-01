@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IEL AUCTION</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <div class="head">IEL KALINGANAGAR URJJA COMMITTEE CRICKET AUCTION</div>
+    <div id="info">Updates</div>
+    <div class="player">Player Name:</div>
+    <textarea required name="name" id="p1" cols="30" rows="1" placeholder="Enter name here"></textarea>
+    <div class="type">Player Category</div>
+    <select required name="type" id="p2" cols="30" rows="1" placeholder="Enter category">
+            <option value="Batter">Batter</option>
+            <option value="Bowler">Bowler</option>
+            <option value="All-rounder">All-rounder</option>
+    </select>
+    <div class="base">Base Price</div>
+    <textarea required name="base"  id="i1" cols="30" rows="1" placeholder="Enter base price"></textarea>
+    <button onclick="putValue()">Start Bidding</button>
+    <div class="bidding">Bid(in lakh)
+    <div class="amt" id="a1"></div>
+    <div id="team"></div>
+    <div><button value="team 1" id="b1" onclick="bid1()">team 1</button>
+        <button value="team 2" id="b2" onclick="bid2()">team 2</button>
+        <button value="team 3" id="b3" onclick="bid3()">team 3</button>
+        <button onclick="sold()">Sold</button>
+        <button onclick="unSold()">Unsold</button></div>
+    <div id="timer"></div >
+    <div style="position: absolute; bottom: 20px; right: 20px; font-size: 20px;">Designed by Atulya & Nehal</div>
+</body>
+</html>
