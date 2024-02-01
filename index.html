@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,29 +8,90 @@
     <link rel="stylesheet" href="index.css">
     <script src="index.js"></script>
 </head>
+
 <body>
     <div class="head">IEL KALINGANAGAR URJJA COMMITTEE CRICKET AUCTION</div>
-    <div id="info">Updates</div>
-    <div class="player">Player Name:</div>
-    <textarea required name="name" id="p1" cols="30" rows="1" placeholder="Enter name here"></textarea>
-    <div class="type">Player Category</div>
-    <select required name="type" id="p2" cols="30" rows="1" placeholder="Enter category">
-            <option value="Batter">Batter</option>
-            <option value="Bowler">Bowler</option>
-            <option value="All-rounder">All-rounder</option>
-    </select>
-    <div class="base">Base Price</div>
-    <textarea required name="base"  id="i1" cols="30" rows="1" placeholder="Enter base price"></textarea>
-    <button onclick="putValue()">Start Bidding</button>
-    <div class="bidding">Bid(in lakh)
-    <div class="amt" id="a1"></div>
-    <div id="team"></div>
-    <div><button value="team 1" id="b1" onclick="bid1()">team 1</button>
-        <button value="team 2" id="b2" onclick="bid2()">team 2</button>
-        <button value="team 3" id="b3" onclick="bid3()">team 3</button>
-        <button onclick="sold()">Sold</button>
-        <button onclick="unSold()">Unsold</button></div>
-    <div id="timer"></div >
-    <div style="position: absolute; bottom: 20px; right: 20px; font-size: 20px;">Designed by Atulya & Nehal</div>
+    <div class="updates">
+        <div style="font-size: 25px;"><u>UPDATES</u></div>
+        <div id="info"></div>
+    </div>
+    <div id="mainarea">
+        <div class="basic">
+            <div class="player">Player Name:</div>
+            <textarea required name="name" id="p1" cols="30" rows="1" placeholder="Enter name here"></textarea>
+            <div class="type">Player Category</div>
+            <select required name="type" id="p2" cols="30" rows="1" placeholder="Enter category">
+                <option value="Batter">Batter</option>
+                <option value="Bowler">Bowler</option>
+                <option value="All-rounder">All-rounder</option>
+            </select>
+            <div class="base">Base Price</div>
+            <textarea required name="base" id="i1" cols="30" rows="1" placeholder="Enter base price"></textarea>
+            <button class="bidButton" onclick="putValue()">Start Bidding</button>
+        </div>
+        <div class="currentBid">
+            <div class="playerInfo" id="pInfo">PLAYER</div>
+            <div class="playerCategory" id="pCat">CATEGORY</div>
+            <div class="bidding">
+                <div id="bidText">Current bid amount </div>
+                <div class="amt" id="a1">0</div>
+                <div id="bidText">lakhs</div>
+                <div id="team"> by TEAM</div>
+            </div>
+            <div id="timer"></div>
+            <div>
+                <button value="KALINGA TUSKERS" id="b1" onclick="bid1()">KALINGA TUSKERS</button>
+                <button value="NAAGSHAKTI" id="b2" onclick="bid2()">NAAGSHAKTI</button>
+                <button value="POWER PACERS" id="b3" onclick="bid3()">POWER PACERS</button>
+            </div>
+            <div>
+                <button onclick="sold()">SOLD</button>
+                <button onclick="unSold()">UNSOLD</button>
+            </div>
+        </div>
+        <div class="teamInfo">
+            <div class="teamName">
+                <div class="tmIn" id="team1info">K TUSKERS</div>
+                <div class="tmIn" id="team11"></div>
+            </div>
+            <div class="teamName">
+                <div class="tmIn" id="team2info">NSHAKTI</div>
+                <div class="tmIn" id="team12"></div>
+            </div>
+            <div class="teamName">
+                <div class="tmIn" id="team3info" style="border-right: none;">P PACERS</div>
+                <div class="tmIn" id="team13" style="border-right: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="budget">
+        <div class="teams">
+            <div class="bgt" id="budget1">TEAMS</div>
+            <div class="bgt" id="budget2">Total Budget(in Lakhs)</div>
+            <div class="bgt" id="budget3">Utilised Budget</div>
+            <div style="border-bottom: none;" class="bgt" id="budget4">Remaining Budget</div>
+        </div>
+        <div class="teams">
+            <div class="bgt" id="budget1">KALINGA TUSKERS</div>
+            <div class="bgt" id="budget21">100</div>
+            <div class="bgt" id="budget31">0</div>
+            <div style="border-bottom: none;" class="bgt" id="budget41">100</div>
+        </div>
+        <div class="teams">
+            <div class="bgt" id="budget1">NAAGSHAKTI</div>
+            <div class="bgt" id="budget21">100</div>
+            <div class="bgt" id="budget32">0</div>
+            <div style="border-bottom: none;" class="bgt" id="budget42">100</div>
+        </div>
+        <div class="teams">
+            <div style="border-right: none;" class="bgt" id="budget1">POWER PACERS</div>
+            <div style="border-right: none;" class="bgt" id="budget21">100</div>
+            <div style="border-right: none;" class="bgt" id="budget33">0</div>
+            <div style="border-bottom: none; border-right: none;" class="bgt" id="budget43">100</div>
+        </div>
+    </div>
+    <div style="position: absolute; bottom: 30px; right: 2%; font-size: 20px;font-weight: bolder;">Designed by Atulya & Nehal</div>
 </body>
+
 </html>
