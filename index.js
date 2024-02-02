@@ -16,6 +16,7 @@ var playerType;
         document.getElementById("a1").innerText=txt;  
         document.getElementById("team").innerText="";
         resetTimer();
+        currentBidder="";
 
     }
 function bid1() {
