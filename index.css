@@ -78,6 +78,7 @@ body::after {
 }
 .playerInfo{
     font-size: 40px;
+    color: #f00;
 }
 .playerCategory{
     font-size: 25px;
