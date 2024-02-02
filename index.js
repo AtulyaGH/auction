@@ -16,7 +16,7 @@ var playerType;
         document.getElementById("a1").innerText=txt;  
         document.getElementById("team").innerText="";
         resetTimer();
-        currentBidder="";
+        currentBidder=null;
 
     }
 function bid1() {
@@ -59,6 +59,7 @@ else{
 }
 }
 function sold() {
+    if (currentBidder!=null) {
     playerName=document.getElementById("p1").value;
     playerType=document.getElementById("p2").value;
     price= document.getElementById("a1").innerText;
@@ -66,9 +67,14 @@ function sold() {
     clearInterval(countdownTimer);
     document.getElementById("timer").innerText="";
     document.getElementById("a1").innerText="0";
-    document.getElementById("team").innerText="by TEAM";
+    document.getElementById("team").innerText="BY TEAM";
     calculate();
     assign();
+    currentBidder=null;
+    }
+    else{
+        alert("No Bidders");
+    }
 }
 function unSold() {
     let playerName=document.getElementById("p1").value;
@@ -76,6 +82,7 @@ function unSold() {
     document.getElementById("info").innerText+= "\n"+playerName+"("+playerType+") is unsold. Better luck next time😞";
     clearInterval(countdownTimer);
     document.getElementById("timer").innerText="";
+    currentBidder=null;
 }
 function resetTimer() {
     clearInterval(countdownTimer);
@@ -92,7 +99,12 @@ function startTimer() {
     
         if (timeLeft < 1) {
             clearInterval(countdownTimer);
-            sold();
+            if (currentBidder!=null) {
+                sold();
+            }
+            else {
+                unSold();
+            }
         }
     }, 1000);
 }
@@ -118,14 +130,19 @@ function calculate() {
 }
 function assign() {
     let c;
+    let x;
     if (currentBidder=="KALINGA TUSKERS") {
         c="team11";
+        x="pNum1";
     }
     else if (currentBidder=="NAAGSHAKTI"){
         c="team12";
+        x="pNum2";
     }
     else if(currentBidder="POWER PACERS"){
         c="team13";
+        x="pNum3";
     }
     document.getElementById(c).innerText+="\n"+playerName;
+    document.getElementById(x).innerText=Number(document.getElementById(x).innerText)+1;
 }
