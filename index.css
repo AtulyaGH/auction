@@ -63,6 +63,7 @@ body::after {
     display: flex;
     align-items: center; 
     justify-content: center;
+    color: #f00;
 }
 #bidText{
     width: auto;
@@ -185,7 +186,7 @@ button:active {
 
 /* Style the budget numbers */
 #budget21, #budget31, #budget32, #budget33, #budget41, #budget42, #budget43 {
-    color: #28a745;
+    color: #A020F0;
     font-weight: bolder;
 }
 #team11,#team12,#team13{
